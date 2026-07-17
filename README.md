@@ -2,6 +2,10 @@
 
 Professional marketing PWA for **DMR Mechanical LLC** (Shreveport, LA / Ark-La-Tex): HVAC, plumbing, boilers, and mechanical services.
 
+**Production:** [https://dmr-mechanical.vercel.app](https://dmr-mechanical.vercel.app)
+
+**GitHub:** [https://github.com/caderimmer/dmr-mechanical](https://github.com/caderimmer/dmr-mechanical)
+
 ## Stack
 
 - Next.js (App Router) + TypeScript + Tailwind CSS
