@@ -1,0 +1,56 @@
+{
+  "name": "DMR Mechanical LLC",
+  "short_name": "DMR Mechanical",
+  "description": "HVAC, plumbing, and mechanical services in Shreveport and the Ark-La-Tex. 24/7 emergency. Request a quote or call from the app.",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#FFFFFF",
+  "theme_color": "#0A1F3D",
+  "lang": "en-US",
+  "categories": ["business", "utilities"],
+  "icons": [
+    {
+      "src": "/images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Call DMR Mechanical",
+      "short_name": "Call",
+      "description": "Call (318) 629-6800",
+      "url": "/contact?action=call",
+      "icons": [{ "src": "/images/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Request a Quote",
+      "short_name": "Quote",
+      "description": "Book service or request a quote",
+      "url": "/contact",
+      "icons": [{ "src": "/images/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Emergency Info",
+      "short_name": "Emergency",
+      "description": "24/7 emergency contact",
+      "url": "/offline",
+      "icons": [{ "src": "/images/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}
