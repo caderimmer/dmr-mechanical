@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+/* Brand: navy · deep red · white (DMR logo) — editorial spacing like runtalon */
+:root {
+  --navy-950: #0a1f3d;
+  --navy-900: #0d2a52;
+  --navy-800: #123566;
+  --steel-700: #2c3f5c;
+  --steel-500: #5a6d85;
+  --red-700: #9b1528;
+  --red-600: #c41e3a;
+  --red-500: #e02040;
+  --ice-50: #f7f8fa;
+  --ice-100: #e8ecf1;
+  --white: #ffffff;
+  --background: var(--white);
+  --foreground: var(--navy-950);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-navy-950: var(--navy-950);
+  --color-navy-900: var(--navy-900);
+  --color-navy-800: var(--navy-800);
+  --color-steel-700: var(--steel-700);
+  --color-steel-500: var(--steel-500);
+  --color-red-700: var(--red-700);
+  --color-red-600: var(--red-600);
+  --color-red-500: var(--red-500);
+  --color-ice-50: var(--ice-50);
+  --color-ice-100: var(--ice-100);
+  --font-sans: var(--font-source-sans);
+  --font-display: var(--font-barlow);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-source-sans), system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-barlow), system-ui, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+:focus-visible {
+  outline: 2px solid var(--red-600);
+  outline-offset: 3px;
+}
+
+/* Editorial section rhythm */
+.section-pad {
+  @apply px-5 py-20 sm:px-8 sm:py-28 lg:px-10 lg:py-32;
+}
+
+.container-dmr {
+  @apply mx-auto w-full max-w-6xl;
+}
+
+.measure {
+  max-width: 38rem;
+}
+
+.measure-wide {
+  max-width: 42rem;
+}
+
+/* Eyebrow / section label — runtalon-style */
+.eyebrow {
+  @apply text-[11px] font-semibold uppercase tracking-[0.18em] text-red-600;
+}
+
+.headline {
+  @apply font-display font-bold tracking-tight text-navy-950;
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  line-height: 1.08;
+}
+
+.headline-xl {
+  @apply font-display font-bold tracking-tight text-white;
+  font-size: clamp(2.75rem, 7vw, 5rem);
+  line-height: 1.02;
+}
+
+.body-lg {
+  @apply text-base leading-relaxed text-steel-700 sm:text-lg;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(1.25rem);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Engineered subtle grid for dark sections */
+.grid-engine {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+body.has-mobile-cta {
+  padding-bottom: 4.5rem;
+}
+
+@media (min-width: 768px) {
+  body.has-mobile-cta {
+    padding-bottom: 0;
+  }
+}
